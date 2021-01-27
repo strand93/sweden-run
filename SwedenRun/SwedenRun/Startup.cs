@@ -15,6 +15,7 @@ namespace SwedenRun
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddControllersWithViews();
+      services.AddControllersWithViews(x => x.SuppressAsyncSuffixInActionNames = false).AddRazorRuntimeCompilation();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
