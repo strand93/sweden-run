@@ -1,10 +1,4 @@
 ﻿body {
-}
-
-.header {
-    padding: 5em;
-}
-
-#start{
-    padding-top: 8em;
+    padding-bottom: 40px;
+    background-color: blue;
 }
