@@ -2,3 +2,13 @@
     padding: 40px 15px;
     text-align: center;
 }
+
+#input-email{
+    width: 20em;
+    margin: 0.5em;
+}
+
+#input-password {
+    width: 20em;
+    margin: 0.5em;
+}
