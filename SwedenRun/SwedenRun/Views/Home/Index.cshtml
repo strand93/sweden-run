@@ -4,7 +4,7 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row">
-    <div class="starter-template">
+    <div class="start">
       <h1>Sweden Run</h1>
 
       <p class="lead">Sign in</p>
@@ -18,9 +18,9 @@
             <input type="password" id="input-password" class="form-control" placeholder="Password" required>
 
             <button class="w-75 mt-2 btn btn-primary" type="submit">Sign in</button>
-            <hr style="margin: 0.5em"/>
+            <hr style="margin: 0.5em" />
 
-            <button class="w-75 btn btn-secondary">Create Runner</button>
+            <a class="w-75 btn btn-secondary" asp-controller="Home" asp-action="AddRunner">Create Runner</a>
           </form>
         </div>
       </div>
