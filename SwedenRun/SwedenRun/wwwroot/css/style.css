@@ -12,3 +12,12 @@
     width: 20em;
     margin: 0.5em;
 }
+
+.wrapper{
+    padding: 10em;
+    text-align: center;
+}
+
+td{
+    vertical-align: middle;
+}
