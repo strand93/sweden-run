@@ -13,5 +13,10 @@ namespace SwedenRun.Models
       new Runner { RunnerId = 2, Age = 55, Name = "Batman"},
       new Runner { RunnerId = 3, Name = "Elon Musk"}
     }.AsQueryable<Runner>();
+
+    public Runner GetRunnerDetails(int id)
+    {
+      return Runners.Where(runner => runner.RunnerId.Equals(id)).First();
+    }
   }
 }

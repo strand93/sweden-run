@@ -8,5 +8,6 @@ namespace SwedenRun.Models
   public interface ISweRunRepository
   {
     IQueryable<Runner> Runners { get; }
+    Runner GetRunnerDetails(int id);
   }
 }

@@ -20,7 +20,7 @@
       {
         <tr>
           <th scope="row"><img src="~/images/Runner.png" alt="Runner avatar" width="50" height="50"></th>
-          <td>@runner.RunnerId</td>
+          <td><a asp-controller="Runner" asp-action="RunnerDetail" asp-route-id="@runner.RunnerId">@runner.RunnerId</a></td>
           <td>@runner.Name</td>
           <td>200 km</td>
         </tr>
