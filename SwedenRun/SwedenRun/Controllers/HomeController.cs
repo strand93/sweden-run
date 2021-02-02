@@ -13,5 +13,10 @@ namespace SwedenRun.Controllers
     {
       return View();
     }
+
+    public ViewResult Index1(Runner runner)
+    {
+      return View(runner);
+    }
   }
 }
