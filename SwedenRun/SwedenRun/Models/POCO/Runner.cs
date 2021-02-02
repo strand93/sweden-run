@@ -8,7 +8,7 @@ namespace SwedenRun.Models
 {
   public class Runner
   {
-    public int RunnerId { set; get; }
+    public string RunnerId { set; get; }
 
     [Display(Name = "Name")]
     [Required(ErrorMessage = "The Name field is required.")]

@@ -7,11 +7,15 @@ namespace SwedenRun.Models
 {
   public class FakeSweRunRepository : ISweRunRepository
   {
+
+    /**
+     *  RUNNER
+     */
     public IQueryable<Runner> Runners => new List<Runner>
     {
-      new Runner { RunnerId = 1, Age = "27", Email = "alex@strand.com", Name = "Alexander Strand" },
-      new Runner { RunnerId = 2, Age = "55", Name = "Batman"},
-      new Runner { RunnerId = 3, Name = "Elon Musk"}
+      new Runner { RunnerId = "R001", Age = "27", Email = "alex@strand.com", Name = "Alexander Strand" },
+      new Runner { RunnerId = "R002", Age = "55", Name = "Batman"},
+      new Runner { RunnerId = "R003", Name = "Elon Musk"}
     }.AsQueryable<Runner>();
 
     public Runner GetRunnerDetails(int id)
@@ -26,8 +30,20 @@ namespace SwedenRun.Models
       {
         //Runners.Add(runner);
       }
-
       return true;
     }
+
+    /**
+     *  RUN
+     */
+    public IQueryable<Run> Runs => new List<Run>
+    {
+      new Run{ RunId = 1, RunnerId = "R001", Distance = 10, Time = "55:00"},
+      new Run{ RunId = 2, RunnerId = "R001", Distance = 5.5, Time = "25:20"},
+      new Run{ RunId = 3, RunnerId = "R001", Distance = 10, Time = "52:00"},
+      new Run{ RunId = 4, RunnerId = "R002", Distance = 3, Time = "30:00"},
+      new Run{ RunId = 5, RunnerId = "R002", Distance = 5, Time = "45:00"},
+      new Run{ RunId = 6, RunnerId = "R003", Distance = 12, Time = "55:00"}
+    }.AsQueryable<Run>();
   }
 }

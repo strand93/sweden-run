@@ -10,5 +10,6 @@ namespace SwedenRun.Models
     IQueryable<Runner> Runners { get; }
     Runner GetRunnerDetails(int id);
     bool SaveRunner(Runner runner);
+    IQueryable<Run> Runs { get; }
   }
 }
