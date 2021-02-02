@@ -24,53 +24,38 @@
     <div class="col-md-7 col-lg-8">
       <h4 class="mb-3">Runner Information</h4>
 
-      <form class="needs-validation" novalidate asp-controller="Home" asp-action="Index" method="post">
+      <form class="needs-validation" asp-controller="Home" asp-action="Index" method="post">
         <!--<form class="needs-validation" novalidate>-->
         <div class="row g-3">
           <div class="col-12">
             <label class="form-label" asp-for="Name"></label>
-            <input type="text" class="form-control" asp-for="Name" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
+            <input type="text" class="form-control" asp-for="Name">
           </div>
 
           <div class="col-12">
             <label class="form-label" asp-for="Email"></label>
-            <input type="email" class="form-control" asp-for="Email" placeholder="you@example.com">
-            <div class="invalid-feedback">
-              Please enter a valid email address for registration.
-            </div>
+            <input type="email" class="form-control" asp-for="Email">
           </div>
 
           <div class="col-12">
-            <label class="form-label" asp-for="Age">Age</label>
-            <select class="form-select" asp-for="Age" required>
-              <option value="">Choose...</option>
+            <label class="form-label" asp-for="Age"></label>
+            <select class="form-select" asp-for="Age">
+              <option value="">Select</option>
               @for (int i = 0; i <= 100; i++)
               {
                 <option value="@i">@i years</option>
               }
             </select>
-            <div class="invalid-feedback">
-              Please select a valid age.
-            </div>
           </div>
 
           <div class="col-12">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="No rules">
-            <div class="invalid-feedback">
-              Please enter a valid password.
-            </div>
+            <input type="password" class="form-control" id="password">
           </div>
 
           <div class="col-12">
             <label for="confirm-password" class="form-label">Confirm password</label>
-            <input type="password" class="form-control" id="confirm-password" placeholder="Same password">
-            <div class="invalid-feedback">
-              Please enter a valid password.
-            </div>
+            <input type="password" class="form-control" id="confirm-password">
           </div>
         </div>
         <hr class="my-4">
