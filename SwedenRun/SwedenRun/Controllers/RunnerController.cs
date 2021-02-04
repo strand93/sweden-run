@@ -26,8 +26,10 @@ namespace SwedenRun.Controllers
       return View(repository.Runners);
     }
 
-    public ViewResult RunnerDetail(int id)
+    public ViewResult RunnerDetail(string id)
     {
+      ViewBag.RunList = repository.GetRunnerRuns(id);
+
       return View(repository.GetRunnerDetails(id));
     }
   }

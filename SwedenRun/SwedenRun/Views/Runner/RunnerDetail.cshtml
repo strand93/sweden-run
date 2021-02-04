@@ -1,8 +1,57 @@
-﻿@{ 
+﻿@{
   ViewBag.Title = "Runner - Sweden Run";
 }
 
-@model Runner; 
+@model Runner
 
-<h1> RUNNER </h1>
-<p>@Model.Name</p>
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>@Model.Name's Runner Page</h2>
+    <p class="lead">Check out @Model.Name's amazing progress!</p>
+  </div>
+
+  <div class="row g-3">
+    <!--Right Section-->
+    <div class="col-md-6 col-lg-5 order-md-last">
+      <div class="card">
+        <div class="card-header">
+          Runner progress
+        </div>
+        <div class="card-body">
+          <p class="card-text">Total distance run: </p>
+        </div>
+      </div>
+      <p>Progress across Sweden</p>
+      <div class="progress">
+        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+    </div>
+
+    <!--Left Section-->
+    <div class="col-md-6 col-lg-7">
+      <h4 class="mb-3">Runner Information</h4>
+      <div class="card" id="run-list">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Distance</th>
+              <th scope="col">Time</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (Run run in ViewBag.RunList)
+            {
+              <tr>
+                <td>@run.Distance</td>
+                <td>@run.Time</td>
+                <td>@run.Date</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

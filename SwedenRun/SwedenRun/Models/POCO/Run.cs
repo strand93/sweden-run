@@ -8,6 +8,7 @@ namespace SwedenRun.Models
   public class Run
   {
     public int RunId { set; get; }
+    public string Date { set; get; }
 
     public double Distance { set; get; }
     public string Time { set; get; }
